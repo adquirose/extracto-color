@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo.png'
 import { Zoom, Profile, ShoppingBag } from '../Icons'
 import './styles.css'
@@ -9,8 +10,8 @@ export default function Navbar(){
             <img src={Logo} style={{width:'165px'}} alt="logo-extracto-color"/>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <NavLink className="li" to="/">Home</NavLink>
+                    <NavLink className="li" to="/about">About</NavLink>
                     <li>Products</li>
                     <li>Blog</li>
                     <li>Contact</li>

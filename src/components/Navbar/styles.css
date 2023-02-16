@@ -19,7 +19,7 @@ ul{
     list-style-type:none;
     padding: 0;
 }
-li{
+li,.li{
     display: inline;
     padding-left: 12px;
     padding-bottom: 3px;
@@ -28,7 +28,7 @@ li{
     color:var(--texto-principal);
     cursor: pointer;
 }
-li:hover{
+li, .li:hover{
     border-bottom: 1px solid transparent;
     color:#506654
 }
