@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
-  --texto-principal: #66836b;
+  --color-principal: #66836b;
   --white: #ffffff;
 }
 body {
@@ -10,4 +10,21 @@ body {
   padding: 0;
   font-family: Helvetica, sans-serif;
 }
-
+h1, h2, h3{
+  margin: 0 0 17.5px;
+  font-family: "Baskerville No 2",serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.section{
+  padding-top: 60px;
+}
+.text-center{
+  text-align: center;
+}
+.color-primary{
+  color:var(--color-principal);
+}

@@ -1,0 +1,41 @@
+.natural-product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    width: 100%;
+    height: 345px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px #ccc;
+}
+.natural-product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.natural-product-card img:hover {
+  opacity: 70%;
+}
+
+.natural-product-card h3 {
+  color: #66836b;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.natural-product-card h3:hover {
+  text-decoration: underline;
+}
+
+.natural-product-card p {
+  font-size: 16px;
+  font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color: #333;
+}
