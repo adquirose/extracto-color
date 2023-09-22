@@ -1,13 +1,10 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './views/Home'
-import Products from './views/Products'
-import Historia from './views/Historia'
-import Preguntas from './views/Preguntas'
-import Mayoristas from './views/Mayoristas'
-import Contacto from './views/Contacto'
-import CrearCuenta from './views/CrearCuenta'
-import IniciarSesion from './views/IniciarSesion'
+import Tienda from './views/Tienda'
+import Proyectos from './views/Proyectos'
+import Blog from './views/Blog'
+import { Fragment } from 'react'
 
 const Layout = () => {
   const style = ({ isActive }) => ({
@@ -22,20 +19,19 @@ const Layout = () => {
     </>
   );
 };
+
 function App() {
-  return (  
+  return ( 
+    <Fragment>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home/>}/>
-          <Route path="productos" element={<Products/>}/>
-          <Route path="historia" element={<Historia/>}/>
-          <Route path="preguntas-frecuentes" element={<Preguntas/>}/>
-          <Route path="mayoristas" element={<Mayoristas/>}/>
-          <Route path="contacto" element={<Contacto/>}/>
-          <Route path="crear-cuenta" element={<CrearCuenta/>}/>
-          <Route path="iniciar-sesion" element={<IniciarSesion/>}/>
+          <Route path="/tienda" element={<Tienda/>}/>
+          <Route path="/proyectos" element={<Proyectos/>}/>
+          <Route path="/blog" element={<Blog/>}/>
         </Route>
       </Routes>
+    </Fragment> 
   )
 }
 

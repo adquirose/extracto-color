@@ -13,14 +13,12 @@ function List({ openList, onClick, style }){
       </Button>
       <Ul>
         <NavLink style={style} to="/" onClick={onClick}>Inicio</NavLink>
-        <NavLink style={style} to="/productos" onClick={onClick}>Productos</NavLink>
+        <NavLink style={style} to="/tienda" onClick={onClick}>Tienda</NavLink>
+        <NavLink style={style} to="/proyectos" onClick={onClick}>Proyectos</NavLink>
         <NavLink style={style} to="/historia" onClick={onClick}>Historia</NavLink>
-        <NavLink style={style} to="/preguntas-frecuentes" onClick={onClick}>Preguntas Frecuentes</NavLink>
-        <NavLink style={style} to="/mayoristas" onClick={onClick}>Mayoristas</NavLink>
         <NavLink style={style} to="/contacto" onClick={onClick}>Contacto</NavLink>
         <hr/>
-        <NavLink style={style} to="/crear-cuenta">Crear Cuenta</NavLink>
-        <NavLink style={style} to="/iniciar-sesion">Iniciar sesión</NavLink>
+        <NavLink style={style} to="/blog">Blog</NavLink>
       </Ul>
     </ListContainer>
   )
@@ -37,7 +35,7 @@ function Nav({style}) {
   }
   return (
     <NavContainer>
-      { openList && <div onClick={handleOnclick} style={{position:'absolute', top:0, zIndex:9, background:'black', opacity:0.125, width:'100vw', height:'100vh'}}/>}
+      { openList && <div onClick={handleOnclick} style={{ position:'absolute', top:0, zIndex:9, background:'black', opacity:0.125, width:'100vw', height:'100vh' }}/>}
       <List openList={openList} onClick={handleOnclick} style={style}/>
       <Navigator>
         <ButtonContainer $justifyContent="start">
@@ -45,9 +43,9 @@ function Nav({style}) {
             <Menu width={20} height={20}/>
           </Button>
         </ButtonContainer>
-          <ImgContainer>
-            <Img src={Logo} alt='img-logo'/>
-          </ImgContainer>
+        <ImgContainer>
+          <Img src={Logo} alt='img-logo'/>
+        </ImgContainer>
         <ButtonContainer $alignItems="center" $justifyContent="space-between">
           <Button>
             <Search width={20} height={20}/>

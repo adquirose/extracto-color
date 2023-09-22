@@ -1,12 +1,5 @@
 import styled, { css, keyframes} from 'styled-components'
 
-// animation-name: example;
-// animation-duration: 5s;
-// animation-timing-function: linear;
-// animation-delay: 2s;
-// animation-iteration-count: infinite;
-// animation-direction: alternate;
-
 const listIn = keyframes`   
   0% {
     left:-265px;
