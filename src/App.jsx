@@ -1,14 +1,19 @@
+import { Fragment} from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './views/Home'
+
 import Tienda from './views/Tienda'
 import Proyectos from './views/Proyectos'
 import Blog from './views/Blog'
-import { Fragment } from 'react'
+import Historia from './views/Historia'
 
 const Layout = () => {
   const style = ({ isActive }) => ({
     fontWeight: isActive ? 'bold' : 'normal',
+    fontSize:'1rem',
+    paddingBottom:'7px'
+
   });
   return (
     <>
@@ -21,13 +26,15 @@ const Layout = () => {
 };
 
 function App() {
+
   return ( 
     <Fragment>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" exact element={<Home/>}/>
           <Route path="/tienda" element={<Tienda/>}/>
           <Route path="/proyectos" element={<Proyectos/>}/>
+          <Route path="/historia" element={<Historia/>}/>
           <Route path="/blog" element={<Blog/>}/>
         </Route>
       </Routes>

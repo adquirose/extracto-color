@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom'
 
 function List({ openList, onClick, style }){
   return(
-    <ListContainer $openList={openList}>
+    <ListContainer id="list" $openList={openList}>
       <Button style={{position:'absolute',top:15, right:15}} onClick={onClick}>
         <Close width={20} height={20}/>
       </Button>
       <Ul>
-        <NavLink style={style} to="/" onClick={onClick}>Inicio</NavLink>
+        <NavLink style={style} to="/" end onClick={onClick}>Inicio</NavLink>
         <NavLink style={style} to="/tienda" onClick={onClick}>Tienda</NavLink>
         <NavLink style={style} to="/proyectos" onClick={onClick}>Proyectos</NavLink>
         <NavLink style={style} to="/historia" onClick={onClick}>Historia</NavLink>
@@ -33,6 +33,7 @@ function Nav({style}) {
       setOpenList(!openList)
     }
   }
+  
   return (
     <NavContainer>
       { openList && <div onClick={handleOnclick} style={{ position:'absolute', top:0, zIndex:9, background:'black', opacity:0.125, width:'100vw', height:'100vh' }}/>}

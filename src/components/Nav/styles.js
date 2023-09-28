@@ -23,8 +23,10 @@ export const Navigator = styled.nav`
     display:flex;
     justify-content:center;
     align-items:center;
-    position:absolute;
+    position:fixed;
     top:0;
+    z-index:5;
+    background-color:white;
 `
 export const Nav = styled.div`
   height:auto;
@@ -36,10 +38,11 @@ export const Img = styled.img`
 `
 
 export const ListContainer = styled.div`
-  position:relative;
+  position:fixed;
   width:260px;
   height:100vh;
   left:-265px;
+  
   z-index:10;
   background:white;
   animation:${({$openList}) => {
